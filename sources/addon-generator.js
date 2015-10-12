@@ -3,7 +3,7 @@
 
 	var mJSZip = new JSZip();
 	var jni = mJSZip.folder("jni");
-	var host = "http://localhost:63342/AddOnGen-Rewrite/";
+	var host = "http://hellpie.github.io/addongen/";
 
 	var AndroidManifest;
 	var MakeFile;
@@ -153,11 +153,6 @@
 
 	function wassupNow(msg) {
 		document.getElementById("download-infos").textContent = msg;
-		setTimeout(lel(msg), 500);
-	}
-
-	function lel(msg, i) {
-		console.log(msg);
 	}
 
 	var createXHR = window.ActiveXObject ?
