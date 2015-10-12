@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="PACKAGENAME"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <!-- Default permissions and sdk versions - Needed to work with BL and JNI -->
+    <uses-permission android:name="net.zhuoweizhang.mcpelauncher.ADDON"/>
+    <uses-sdk android:minSdkVersion="14" />
+
+    <!-- No Java code, Addon name -->
+    <application android:label="ADDONNAME"
+                 android:hasCode="false">
+
+        <!-- Must match Android.mk - Specifies JNI libs infos for BL -->
+        <meta-data android:name="net.zhuoweizhang.mcpelauncher.api.nativelibname"
+                   android:value="PACKAGENAME"/>
+
+        <!-- BL Compatibility with MCPE versions -->
+        <meta-data android:name="net.zhuoweizhang.mcpelauncher.api.targetmcpeversion"
+                   android:value="MCPEVERSION"/>
+    </application>
+
+</manifest> 
